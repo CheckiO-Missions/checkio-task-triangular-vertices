@@ -1,39 +1,89 @@
-<p>
-    <i>( Describe task in general )</i>
+<div class="story">
+    <p>“Hey Sofia, check this out.” Stephen called from a patch of ground at the far end of the landing strip. “This is
+        really weird.”</p>
+
+    <p>“What’s up?” Sofia jogged over to take a look.</p>
+
+    <p>“It’s some kind of tiny pyramid I think. I tried picking it up, but it was stuck.”</p>
+
+    <p>“Well, maybe it’s not actually so tiny! Maybe it’s HUGE!”</p>
+
+    <p>“Hmm, well maybe we could dig it up?”</p>
+
+    <p>“Stephen! Is that the spirit of adventure I finally sense in you?”</p>
+
+    <p>“M-maybe. Anyway, I can probably have it dug up in a bit. Let’s see how far this thing goes down.”</p>
+
+    <p>After half a day, Nikola finally steps away from the ships engine room having done all the work he can in the
+        remaining daylight. “Sofiaaaaaa, Steeephennnn? Where are you guys?” He called out, cupping his hands around his
+        mouth to boost his volume.</p>
+
+    <p>“Over here!” He hears Sofia call out from the far end of the landing strip. Nikola walks towards her voice and
+        comes upon a big pit in the ground, at the center of which he sees Sofia and Stephen standing in front of a
+        large pyramid.</p>
+
+    <p>“Holy CAT-5 that thing is massive! Why didn’t we see it on the way down?” he asked the two.
+
+    <p>“I just dug it-” Stephen started.</p>
+
+    <p>“WE just dug it up!” Sofia interrupted. “Come on down Nikola, we could use your help figuring out this diagram
+        next to the door.”</p>
+    Nikola hopped over the edge of the pit and slid down the side. “Okay, let me take a look at it...”</p>
+</div>
+
+<p>The robots have discovered an ancient pyramid. All the points on the interior of the triangle
+    are marked by numbers. Various combinations of numbers and switches were written by the door in the form of
+    geometric shapes.</p>
+
+<p>Consider the points on an infinite grid of equilateral triangles as shown below:</p>
+
+<p class="for_info_only"><img src="{{ MEDIA }}numbers-triangle.png"
+                              width="400px"/></p>
+<p class="for_editor_only"><img src="{{ MEDIA }}numbers-triangle.png"
+                                width="200px"/></p>
+
+
+<p>Note that if we number the points from left to right and from top to bottom, then groups of these points form the
+    vertices of certain geometric shapes. For example, the list of points [1,2,3] and [7,9,18] are the vertices of
+    triangles, the sets [11,13,26,24] and [2, 3, 5, 4] are the vertices of parallelograms (lozenge), and the sets
+    [4,5,9,13,12,7] and [4,6,15,26,24,11] are the vertices of regular hexagons.</p>
+
+<p class="for_info_only"><img src="{{ MEDIA }}triangles-examples.png"
+                              width="600px"/></p>
+<p class="for_editor_only"><img src="{{ MEDIA }}triangles-examples.png"
+                                width="380px"/></p>
+
+<p>Write a program which will continuously accept a set of points on this triangular grid, analyze it, and determine
+    whether the points are the vertices of an "acceptable" figure: triangle, parallelogram (lozenge), or a hexagon. In
+    order for a figure to be acceptable, it must meet the following three conditions:</p>
+<ol>
+    <li>1) Each side of the figure must coincide with an edge on the grid.</li>
+    <li>2) All sides of the figure must be the same length.</li>
+    <li>3) The figure must be convex (has a regular shape).</li>
+</ol>
+<br>
+
+<p>Your program should deduce which geometric figure is represented from the number of points within your input set
+    (e.g., six points can only represent a hexagon, etc). </p>
+
+<p><span><b>Input:</b> A list of no more than six points. The points are limited to a range of 1 through 32767.</span>
 </p>
 
-<p>
-    Sum two passed ints
-</p>
+<p><b>Output:</b> An integer: 3 for a triangle, 4 for a parallelogram, 6 for a regular hexagon and 0 if the figure is
+    not acceptable. The listed points may be given in any order.</p>
 
-<p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
-</p>
-
-<p>
-    <strong>Output: </strong> Int. 
-</p>
-
-
-
-<div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
-    <p>
-        <strong>Example:</strong>
-    </p>
-    <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
-    </pre>
+<div class="for_info_only"><strong>Example</strong>:
+<pre class="brush: python">checkio([1,2,3]) == 3
+checkio([11,13,29,31]) == 0
+checkio([26,11,13,24]) == 4
+checkio([4,5,9,13,12,7]) == 6
+checkio([1,2,3,4,5]) == 0
+checkio([47]) == 0
+checkio([11,13,23,25]) == 0
+</pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
+    How to deal with unusual coordinate systems.
 </p>
