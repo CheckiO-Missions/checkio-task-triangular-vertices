@@ -73,11 +73,40 @@
     height: 20%;
 }
 
+.tryit-content .tool{
+    margin-top: 5px;
+    text-align: center;
+}
+
+.tryit-content td {
+    vertical-align: top;
+}
+
+.tryit-content .tooltip{
+    z-index: 9999;
+    text-align: center;
+    /*float: left;*/
+    position: absolute;
+    border: solid #294270 1px;
+
+    top: 110px;
+    left: 90px;
+    display: none;
+    width: 80px;
+    font-size: 14px;
+    background-color: #8FC7ED;
+    /*opacity: 0.5;*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;;
+}
+
 .tryit-content .checkio-result{
     font-size: 16px;
     text-align: center;
     color: #294270;
-    width: 160px;
+    width: 140px;
+    vertical-align: top;
 }
 
 .tryit-content .btn {
