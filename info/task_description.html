@@ -31,11 +31,12 @@
     Nikola hopped over the edge of the pit and slid down the side. “Okay, let me take a look at it...”</p>
 </div>
 
-<p>The robots have discovered an ancient pyramid. All the points on the interior of the triangle
-    are marked by numbers. Various combinations of numbers and switches were written by the door in the form of
-    geometric shapes.</p>
+<p>The robots have discovered an ancient pyramid with a triangular diagram carved into a wall next to the door to the pyramid. 
+    The diagram appears to consist of a large number of triangles making up a larger triangle.
+    The points making up each triangle are marked with numbers. 
+    Various combinations of numbers and switches were written by the door in the form of geometric shapes.</p>
 
-<p>Consider the points on an infinite grid of equilateral triangles as shown below:</p>
+<p>Consider the points on an infinite grid of equilateral triangles as seen below:</p>
 
 <p class="for_info_only"><img src="{{ MEDIA }}numbers-triangle.png"
                               width="400px"/></p>
@@ -45,15 +46,15 @@
 
 <p>Note that if we number the points from left to right and from top to bottom, then groups of these points form the
     vertices of certain geometric shapes. For example, the list of points [1,2,3] and [7,9,18] are the vertices of
-    triangles, the sets [11,13,26,24] and [2, 3, 5, 4] are the vertices of parallelograms (lozenge), and the sets
-    [4,5,9,13,12,7] and [4,6,15,26,24,11] are the vertices of regular hexagons.</p>
+    triangles, the sets [11,13,26,24] and [2, 3, 5, 4] are the vertices of parallelograms in the shape of diamonds (or lozenge), and the sets
+    [4,5,9,13,12,7] and [4,6,15,26,24,11] are the vertices of typical hexagons.</p>
 
 <p class="for_info_only"><img src="{{ MEDIA }}triangles-examples.png"
                               width="600px"/></p>
 <p class="for_editor_only"><img src="{{ MEDIA }}triangles-examples.png"
                                 width="380px"/></p>
 
-<p>Write a program which will continuously accept a set of points on this triangular grid, analyze it, and determine
+<p>Your goal is to write a program which will continuously accept a set of points on the triangular grid, analyze it, and determine
     whether the points are the vertices of an "acceptable" figure: triangle, parallelogram (lozenge), or a hexagon. In
     order for a figure to be acceptable, it must meet the following three conditions:</p>
 <ol>
