@@ -10,3 +10,4 @@ if __name__ == "__main__":
     assert checkio([1, 2, 3, 4, 5]) == 0, 'It is weird triangle'
     assert checkio([47]) == 0, 'Point'
     assert checkio([11, 13, 23, 25]) == 0, 'It is not parallelogram, again'
+    assert checkio([2,6,8]) == 0, 'triangle but not aligned!'

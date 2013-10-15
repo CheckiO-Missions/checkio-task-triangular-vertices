@@ -81,7 +81,13 @@ TESTS = {
             "input": [22, 11, 17, 8, 13, 6],
             "answer": 0,
             "explanation": [[22, 11], [17, 8], [13, 6]]
-        }
+        },
+        {
+            "input": [2, 6, 8],
+            "answer": 0,
+            "explanation": []
+        },
+
     ],
     "Extra": [
         {
