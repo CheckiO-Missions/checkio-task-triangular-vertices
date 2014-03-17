@@ -28,6 +28,7 @@
 
     <p>“WE just dug it up!” Sofia interrupted. “Come on down Nikola, we could use your help figuring out this diagram
         next to the door.”</p>
+    <p>
     Nikola hopped over the edge of the pit and slid down the side. “Okay, let me take a look at it...”</p>
 </div>
 
@@ -38,10 +39,12 @@
 
 <p>Consider the points on an infinite grid of equilateral triangles as seen below:</p>
 
-<p class="for_info_only"><img src="{{ MEDIA }}numbers-triangle.png"
-                              width="400px"/></p>
-<p class="for_editor_only"><img src="{{ MEDIA }}numbers-triangle.png"
-                                width="200px"/></p>
+<p  style="text-align: center;" class="for_info_only">
+    <img src="{{ MEDIA }}numbers-triangle.png" width="400px"/>
+</p>
+<p  style="text-align: center;" class="for_editor_only">
+    <img src="{{ MEDIA }}numbers-triangle.png" width="200px"/>
+</p>
 
 
 <p>Note that if we number the points from left to right and from top to bottom, then groups of these points form the
@@ -49,12 +52,13 @@
     triangles, the sets [11,13,26,24] and [2, 3, 5, 4] are the vertices of parallelograms in the shape of diamonds (or lozenge), and the sets
     [4,5,9,13,12,7] and [4,6,15,26,24,11] are the vertices of typical hexagons.</p>
 
-<p class="for_info_only"><img src="{{ MEDIA }}triangles-examples.png"
+<p  style="text-align: center;" class="for_info_only"><img src="{{ MEDIA }}triangles-examples.png"
                               width="600px"/></p>
-<p class="for_editor_only"><img src="{{ MEDIA }}triangles-examples.png"
+<p  style="text-align: center;" class="for_editor_only"><img src="{{ MEDIA }}triangles-examples.png"
                                 width="380px"/></p>
 
-<p>Your goal is to write a program which will continuously accept a set of points on the triangular grid, analyze it, and determine
+<p>
+    Your goal is to write a program which will continuously accept a set of points on the triangular grid, analyze it, and determine
     whether the points are the vertices of an "acceptable" figure: triangle, parallelogram (lozenge), or a hexagon. In
     order for a figure to be acceptable, it must meet the following three conditions:</p>
 <ol>
@@ -67,29 +71,36 @@
 <p>Your program should deduce which geometric figure is represented from the number of points within your input set
     (e.g., six points can only represent a hexagon, etc). </p>
 
-<p><span><b>Input:</b> A list of no more than six points. The points are limited to a range of 1 through 32767.</span>
+<p><span><b>Input:</b> A list of no more than six points. The listed points may be given in any order.</span>
 </p>
 
 <p><b>Output:</b> An integer: 3 for a triangle, 4 for a parallelogram, 6 for a regular hexagon and 0 if the figure is
-    not acceptable. The listed points may be given in any order.</p>
+    not acceptable.</p>
 
 <div class="for_info_only"><strong>Example</strong>:
-<pre class="brush: python">checkio([1,2,3]) == 3
-checkio([11,13,29,31]) == 0
-checkio([26,11,13,24]) == 4
-checkio([4,5,9,13,12,7]) == 6
-checkio([1,2,3,4,5]) == 0
+<pre class="brush: python">checkio([1, 2, 3]) == 3
+checkio([11, 13, 29, 31]) == 0
+checkio([26, 11, 13, 24]) == 4
+checkio([4, 5, 9, 13, 12, 7]) == 6
+checkio([1, 2, 3, 4, 5]) == 0
 checkio([47]) == 0
-checkio([11,13,23,25]) == 0
-checkio([2,6,8]) == 0
+checkio([11, 13, 23, 25]) == 0
+checkio([2, 6, 8]) == 0
 </pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    How to deal with unusual coordinate systems.
+    This task show how to deal with unusual coordinate systems. It can be useful for gamedev and tricky puzzles.
+    And this concept is an example of pattern recognition.
 </p>
 
+
+<p>
+    <strong>Precondition:</strong>
+    &forall; x ∈ points : 0 &lt; x &lt; 32767<br>
+
+</p>
 
 <p class="for_info_only">
     <strong>How to use TryIt: </strong><br>

@@ -115,7 +115,6 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
         }
 
 
-
         ext.set_animate_slide(function (this_e, data, options) {
             var $content = $(this_e.setHtmlSlide(ext.get_template('animation'))).find('.animation-content');
             if (!data) {
@@ -161,23 +160,25 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
             //Dont change the code before it
 
-            var canvas = Raphael($content.find(".explanation")[0], fullX, fullY, 0, 0);
-            var dotSet = createMegaTriangle(canvas);
-            for (var i = 0; i < checkioInput.length; i++ ) {
-                dotSet[checkioInput[i] - 1].attr(attrDotSelected);
-            }
-            for (var j = 0; j < explanation.length; j++) {
-                for (i = 0; i < explanation[j].length - 1; i ++) {
-                    var from = explanation[j][i];
-                    var to = explanation[j][i + 1];
-                    canvas.path(
-                        createLinePath(
-                            dotSet[from - 1].attr("cx"),
-                            dotSet[from - 1].attr("cy"),
-                            dotSet[to - 1].attr("cx"),
-                            dotSet[to - 1].attr("cy")
-                        )
-                    ).attr(attrLine);
+            if (explanation) {
+                var canvas = Raphael($content.find(".explanation")[0], fullX, fullY, 0, 0);
+                var dotSet = createMegaTriangle(canvas);
+                for (var i = 0; i < checkioInput.length; i++) {
+                    dotSet[checkioInput[i] - 1].attr(attrDotSelected);
+                }
+                for (var j = 0; j < explanation.length; j++) {
+                    for (i = 0; i < explanation[j].length - 1; i++) {
+                        var from = explanation[j][i];
+                        var to = explanation[j][i + 1];
+                        canvas.path(
+                            createLinePath(
+                                dotSet[from - 1].attr("cx"),
+                                dotSet[from - 1].attr("cy"),
+                                dotSet[to - 1].attr("cx"),
+                                dotSet[to - 1].attr("cy")
+                            )
+                        ).attr(attrLine);
+                    }
                 }
             }
 
@@ -212,7 +213,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 tooltip = true;
             });
 
-            tDotSet.click(function() {
+            tDotSet.click(function () {
                 var mark = this.mark;
                 if (tDots.indexOf(mark) === -1) {
                     tDots.push(mark);
